@@ -20,6 +20,7 @@
         max-width: 900px;
         margin: 0 auto;
         padding-top: 40px;
+        
     }
 
     .title-box {
@@ -28,7 +29,7 @@
         padding: 20px;
         border: 4px solid #3e8e41;
         border-radius: 10px;
-        box-shadow: 0 0 10px #000;
+        box-shadow: 5px 5px 5px black;
     }
 
     .phase {
@@ -39,11 +40,17 @@
         border-radius: 10px;
         box-shadow: 0 0 10px #000;
         display: none;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .phase p {
+        color: #4caf50;
     }
 
     .option-btn {
         display: block;
         width: 100%;
+        color: white;
         text-align: left;
         margin: 10px 0;
         padding: 15px;
@@ -115,7 +122,6 @@
 <div class="container">
     <div class="title-box">
         <h1>Pixel Quiz - Pensamento Computacional</h1>
-        <p>Complete todas as fases!</p>
     </div>
 
     <div class="progress"><div class="bar" id="progressBar"></div></div>
@@ -124,135 +130,197 @@
     <div class="phase" id="fase1" data-fase="1">
         <h2>FASE 1: Algoritmos</h2>
         <p>O que é um algoritmo?</p>
-
-        <button class="option-btn" data-correct="true">Um passo a passo para realizar algo</button>
-        <button class="option-btn" data-correct="false">Um tipo de computador</button>
-        <button class="option-btn" data-correct="false">Um vírus de internet</button>
-
+        <button class="option-btn" data-correct="true">Um passo a passo para realizar uma tarefa.</button>
+        <button class="option-btn" data-correct="false">Um tipo de computador.</button>
+        <button class="option-btn" data-correct="false">Um vírus de internet.</button>
         <button class="send-btn" onclick="sendAnswer(1)">Enviar resposta</button>
     </div>
-
     <!-- FASE 2 -->
     <div class="phase" id="fase2" data-fase="2">
-        <h2>FASE 2: Repetição (Loops)</h2>
-        <p>Qual ação representa uma repetição?</p>
-
-        <button class="option-btn" data-correct="false">Abrir a porta 1 vez</button>
-        <button class="option-btn" data-correct="true">Pular corda 10 vezes</button>
-        <button class="option-btn" data-correct="false">Beber água 1 vez</button>
-
+        <h2>FASE 2: Algoritmos</h2>
+        <p>Qual das opções abaixo é um tipo de algoritmo?</p>
+        <button class="option-btn" data-correct="false">Dormir.</button>
+        <button class="option-btn" data-correct="true">Uma receita de bolo.</button>
+        <button class="option-btn" data-correct="false">Ficar parado.</button>
         <button class="send-btn" onclick="sendAnswer(2)">Enviar resposta</button>
     </div>
-
     <!-- FASE 3 -->
     <div class="phase" id="fase3" data-fase="3">
-        <h2>FASE 3: Condições (SE / SENÃO)</h2>
-        <p>Em qual situação usamos SE/SENÃO?</p>
-
-        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva</button>
-        <button class="option-btn" data-correct="false">Fechar os olhos para dormir</button>
-        <button class="option-btn" data-correct="false">Comer porque gosta</button>
-
+        <h2>FASE 3: Algoritmos</h2>
+        <p>Qual é a primeira coisa a se fazer em um algoritmo?</p>
+        <button class="option-btn" data-correct="false">Fazer qualquer coisa.</button>
+        <button class="option-btn" data-correct="false">Começar pelo fim.</button>
+        <button class="option-btn" data-correct="true">Seguir a primeira instrução.</button>
         <button class="send-btn" onclick="sendAnswer(3)">Enviar resposta</button>
     </div>
 
-     <!-- FASE 3 -->
+    <!-- FASE 4 -->
     <div class="phase" id="fase4" data-fase="4">
-        <h2>FASE 3: Condições (SE / SENÃO)</h2>
-        <p>Em qual situação usamos SE/SENÃO?</p>
-
-        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva</button>
-        <button class="option-btn" data-correct="false">Fechar os olhos para dormir</button>
-        <button class="option-btn" data-correct="false">Comer porque gosta</button>
-
+        <h2>FASE 4: Algoritmos</h2>
+        <p>Algoritmos precisam ter ?</p>
+        <button class="option-btn" data-correct="false">Passos desordenados.</button>
+        <button class="option-btn" data-correct="true">Passos claros e em ordem.</button>
+        <button class="option-btn" data-correct="false">Palavras com sentido sem padrão.</button>
         <button class="send-btn" onclick="sendAnswer(4)">Enviar resposta</button>
     </div>
-    <!-- FASE 3 -->
+
+    <!-- FASE 5 -->
     <div class="phase" id="fase5" data-fase="5">
-        <h2>FASE 3: Condições (SE / SENÃO)</h2>
-        <p>Em qual situação usamos SE/SENÃO?</p>
-
-        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva</button>
-        <button class="option-btn" data-correct="false">Fechar os olhos para dormir</button>
-        <button class="option-btn" data-correct="false">Comer porque gosta</button>
-
+        <h2>FASE 5: Algoritmos</h2>
+        <p>Em um algoritmo, o que acontece se pularmos uma etapa importante?</p>
+        <button class="option-btn" data-correct="false">Nada muda.</button>
+        <button class="option-btn" data-correct="false">Pode dar certo.</button>
+        <button class="option-btn" data-correct="true">Pode dar errado.</button>
         <button class="send-btn" onclick="sendAnswer(5)">Enviar resposta</button>
     </div>
-    <!-- FASE 3 -->
+
+    <!-- FASE 6 -->
     <div class="phase" id="fase6" data-fase="6">
-        <h2>FASE 3: Condições (SE / SENÃO)</h2>
-        <p>Em qual situação usamos SE/SENÃO?</p>
-
-        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva</button>
-        <button class="option-btn" data-correct="false">Fechar os olhos para dormir</button>
-        <button class="option-btn" data-correct="false">Comer porque gosta</button>
-
+        <h2>FASE 6: Repetições </h2>
+        <p>O que significa repetição?</p>
+        <button class="option-btn" data-correct="true">Fazer um passo várias vezes.</button>
+        <button class="option-btn" data-correct="false">Pular etapas.</button>
+        <button class="option-btn" data-correct="false">Fazer tudo ao contrário.</button>
         <button class="send-btn" onclick="sendAnswer(6)">Enviar resposta</button>
     </div>
-    <!-- FASE 3 -->
-    <div class="phase" id="fase7" data-fase="7">
-        <h2>FASE 3: Condições (SE / SENÃO)</h2>
-        <p>Em qual situação usamos SE/SENÃO?</p>
 
-        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva</button>
-        <button class="option-btn" data-correct="false">Fechar os olhos para dormir</button>
-        <button class="option-btn" data-correct="false">Comer porque gosta</button>
+     <!-- FASE 7 -->
+    <div class="phase" id="fase7" data-fase="7">
+        <h2>FASE 7: Repetições</h2>
+        <p>Em qual situação do dia a dia usa-se repetições?</p>
+        <button class="option-btn" data-correct="false">Lavar as mão uma única vez.</button>
+        <button class="option-btn" data-correct="false">Comer porque gosta.</button>
+        <button class="option-btn" data-correct="true">Escovar os dentes fazendo movimentos repetidos.</button>
 
         <button class="send-btn" onclick="sendAnswer(7)">Enviar resposta</button>
     </div>
-    <!-- FASE 3 -->
-    <div class="phase" id="fase8" data-fase="8">
-        <h2>FASE 3: Condições (SE / SENÃO)</h2>
-        <p>Em qual situação usamos SE/SENÃO?</p>
 
-        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva</button>
-        <button class="option-btn" data-correct="false">Fechar os olhos para dormir</button>
-        <button class="option-btn" data-correct="false">Comer porque gosta</button>
+    <!-- FASE 8 -->
+    <div class="phase" id="fase8" data-fase="8">
+        <h2>FASE 8: Repetições</h2>
+        <p>Qual é um exemplo de repetição em programação?</p>
+
+        <button class="option-btn" data-correct="true">Mandar robô andar 5 passos repetindo a mesma ação.</button>
+        <button class="option-btn" data-correct="false">Fazer um desenho e parar.</button>
+        <button class="option-btn" data-correct="false">Fazer o robô andar sempre que quiser.</button>
 
         <button class="send-btn" onclick="sendAnswer(8)">Enviar resposta</button>
     </div>
-    <!-- FASE 3 -->
-    <div class="phase" id="fase9" data-fase="9">
-        <h2>FASE 3: Condições (SE / SENÃO)</h2>
-        <p>Em qual situação usamos SE/SENÃO?</p>
 
-        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva</button>
-        <button class="option-btn" data-correct="false">Fechar os olhos para dormir</button>
-        <button class="option-btn" data-correct="false">Comer porque gosta</button>
+    <!-- FASE 9 -->
+    <div class="phase" id="fase9" data-fase="9">
+        <h2>FASE 9: Repetições</h2>
+        <p>Qual algoritmo abaixo apresenta repetição?</p>
+
+        <button class="option-btn" data-correct="true">Desenhar um circulo -> repetir 3 vezes.</button>
+        <button class="option-btn" data-correct="false">Pular -> correr -> dormir..</button>
+        <button class="option-btn" data-correct="false">Comer -> beber -> pensar.</button>
 
         <button class="send-btn" onclick="sendAnswer(9)">Enviar resposta</button>
     </div>
-    <!-- FASE 3 -->
-    <div class="phase" id="fase10" data-fase="10">
-        <h2>FASE 3: Condições (SE / SENÃO)</h2>
-        <p>Em qual situação usamos SE/SENÃO?</p>
 
-        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva</button>
-        <button class="option-btn" data-correct="false">Fechar os olhos para dormir</button>
-        <button class="option-btn" data-correct="false">Comer porque gosta</button>
+    <!-- FASE 10 -->
+    <div class="phase" id="fase10" data-fase="10">
+        <h2>FASE 10: Condições</h2>
+        <p>O que é uma condição em um algoritmo?</p>
+
+        <button class="option-btn" data-correct="false">Um desenho.</button>
+        <button class="option-btn" data-correct="true">Uma escolha que depende de algo.</button>
+        <button class="option-btn" data-correct="false">Uma repetição.</button>
 
         <button class="send-btn" onclick="sendAnswer(10)">Enviar resposta</button>
+    </div>
+
+    <!-- FASE 11 -->
+    <div class="phase" id="fase11" data-fase="11">
+        <h2>FASE 11: Condições</h2>
+        <p>Em qual situação mostra uma condição?</p>
+
+        <button class="option-btn" data-correct="true">Se chover, usar guarda-chuva.</button>
+        <button class="option-btn" data-correct="false">Fechar os olhos para dormir.</button>
+        <button class="option-btn" data-correct="false">Comer porque gosta.</button>
+
+        <button class="send-btn" onclick="sendAnswer(11)">Enviar resposta</button>
+    </div>
+
+    <!-- FASE 12 -->
+    <div class="phase" id="fase12" data-fase="12">
+        <h2>FASE 12: Condições</h2>
+        <p>Condições servem para?</p>
+
+        <button class="option-btn" data-correct="true">Fazer escolhas.</button>
+        <button class="option-btn" data-correct="false">Não tem utilidade.</button>
+        <button class="option-btn" data-correct="false">Não realizar um passo.</button>
+
+        <button class="send-btn" onclick="sendAnswer(12)">Enviar resposta</button>
+    </div>
+
+    <!-- FASE 13 -->
+    <div class="phase" id="fase13" data-fase="13">
+        <h2>FASE 13: Condições</h2>
+        <p>Qual opção mostra duas ações diferentes para uma condição?</p>
+
+        <button class="option-btn" data-correct="false">Comer e beber.</button>
+        <button class="option-btn" data-correct="false">Correr e pular.</button>
+        <button class="option-btn" data-correct="true">Se a luz estiver apagada, acenda; senão, apague.</button>
+
+        <button class="send-btn" onclick="sendAnswer(13)">Enviar resposta</button>
+    </div>
+
+     <!-- FASE 14 -->
+     <div class="phase" id="fase14" data-fase="14">
+        <h2>FASE 14: Sequência</h2>
+        <p>O que é uma sequência em um algoritmo?</p>
+
+        <button class="option-btn" data-correct="false">Fazer etapas em qualquer ordem.</button>
+        <button class="option-btn" data-correct="true">Ordem correta dos passos.</button>
+        <button class="option-btn" data-correct="false">Repetir uma atividade várias vezes.</button>
+
+        <button class="send-btn" onclick="sendAnswer(14)">Enviar resposta</button>
+    </div>
+
+     <!-- FASE 15 -->
+     <div class="phase" id="fase15" data-fase="15">
+        <h2>FASE 15: Sequência</h2>
+        <p>Porque a sequência é importante?</p>
+
+        <button class="option-btn" data-correct="false">Porque faz o algoritmo ficar maior.</button>
+        <button class="option-btn" data-correct="false">Porque permite uma falta de padrão.</button>
+        <button class="option-btn" data-correct="true">Porque muda o resultado se a ordem estiver errada.</button>
+
+        <button class="send-btn" onclick="sendAnswer(15)">Enviar resposta</button>
+    </div>
+
+    
+     <!-- FASE 16 -->
+     <div class="phase" id="fase16" data-fase="16">
+        <h2>FASE 16: Sequência</h2>
+        <p>Se um algoritmo está em sequência, isso significa que?</p>
+
+        <button class="option-btn" data-correct="false">Ele está confuso.</button>
+        <button class="option-btn" data-correct="true">Ele tem passos claros e organizados.</button>
+        <button class="option-btn" data-correct="false">Ele tem várias condições.</button>
+
+        <button class="send-btn" onclick="sendAnswer(16)">Enviar resposta</button>
     </div>
 
     <!-- FINAL -->
     <div class="final-box" id="finalBox">
          <h1>🎉 PARABÉNS! 🎉</h1>
         <h2>Você completou o Pixel Quiz!</h2>
-       
-
         <h2 id="finalScore"></h2>
-         <p>Ganhou a medalha de Mestre dos Algoritmos!</p>
+        <p>Ganhou a medalha de Mestre dos Algoritmos!</p>
+        <!--
         <h3>Gabarito:</h3>
-        <div id="answersList"></div>
-
-       
-       
+        <div id="answersList"></div>  
+        -->
+        
     </div>
 </div>
 
 <script>
     const pontosPorAcerto = 10;
-    const fasesTotal = 10;
+    const fasesTotal = 16;
 
     let faseAtual = 1;
     let pontos = 0;
